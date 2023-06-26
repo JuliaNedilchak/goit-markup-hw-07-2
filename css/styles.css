@@ -128,23 +128,30 @@ a .part-footer {
   margin-left: auto;
   margin-right: auto;
 }
+
 .main-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 19px 22px 16px;
+  margin: 24px 19px 22px 16px;
   align-items: center;
 }
+
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 428px;
-  height: 796px;
-  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
   background-color: #ffffff;
 }
-
+.menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+}
 .menu-close {
   display: flex;
   justify-content: center;
@@ -185,9 +192,7 @@ a .part-footer {
 
   margin: 0%;
 }
-.menu-container.is-open {
-  transform: translateX(0);
-}
+
 .burger-icon {
   stroke: rgba(46, 47, 66, 1);
 }
@@ -234,6 +239,35 @@ a .part-footer {
   color: rgba(67, 68, 85, 1);
   letter-spacing: 0.02em;
 }
+.media-contacts {
+  display: flex;
+  padding: 0%;
+  margin: 0;
+  margin-left: 40px;
+  margin-top: 48px;
+  margin-right: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+.media-menu {
+  width: 40px;
+  height: 40px;
+  background-color: #404bbf;
+  border-radius: 50%;
+}
+.media-item {
+  fill: #f4f4fd;
+}
+.media-contact {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
 /*.active::after {
   content: '';
   position: absolute;
@@ -261,6 +295,55 @@ a .part-footer {
 /*.contacts .numbers:not(:last-child) {
   margin-right: 40px;
 }*/
+@media screen and (min-width: 768px) {
+  .button-burger {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+  }
+  .site-nav {
+    margin: 0;
+    display: flex;
+    gap: 40px;
+  }
+  .site-nav .site-nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: none;
+    color: var(--title-color);
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mail-number,
+  .numbers .contacts-details {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--title-color);
+  }
+  .site-nav .active {
+    color: #404bbf;
+  }
+  .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    display: block;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;

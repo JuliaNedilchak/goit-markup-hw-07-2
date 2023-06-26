@@ -133,7 +133,7 @@ a .part-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 24px 19px 22px 16px;
+  /*margin: 24px 19px 22px 16px;*/
   align-items: center;
 }
 
@@ -342,7 +342,16 @@ a .part-footer {
     border-radius: 2px;
     display: block;
   }
+@media screen and (min-width: 1158px) {
+  .contacts{
+    display: flex;
+    flex-direction: row;
+ }
+ .site-nav .site-nav-link {
+  padding: 24px 0px;
 }
+}
+  
 
 .backdrop {
   position: fixed;

@@ -717,11 +717,14 @@ ul {
   .photo {
     display: none;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .extra-item,
   .join-part {
     width: 584px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .size {
     display: flex;

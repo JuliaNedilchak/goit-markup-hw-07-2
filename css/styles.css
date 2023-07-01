@@ -232,8 +232,7 @@ a .part-footer {
   margin: 0%;
 }
 
-.burger-icon,
-.x-close {
+.burger-icon {
   stroke: rgba(46, 47, 66, 1);
 }
 /*.site-nav .site-nav-link {

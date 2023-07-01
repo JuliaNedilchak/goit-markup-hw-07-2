@@ -232,7 +232,8 @@ a .part-footer {
   margin: 0%;
 }
 
-.burger-icon {
+.burger-icon,
+.x-close {
   stroke: rgba(46, 47, 66, 1);
 }
 /*.site-nav .site-nav-link {
@@ -853,12 +854,19 @@ header {
   color: var(--primary-white-color);
 }
 .collegues-list {
+  width: 264px;
   /*display: flex;
   margin: 0;
   align-items: center;*/
   padding: 0;
   margin: 0 auto;
-  width: 264px;
+  /*width: 264px;*/
+}
+
+@media screen and (max-width: 767px) {
+  .collegues-list .card:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .collegues-list {
@@ -872,26 +880,25 @@ header {
     column-gap: 24px;
     width: 100%;
   }
+
   .collegues-list .card {
     margin: 0;
     padding: 0;
-    flex-basis: calc(100% / 2 - 108px);
+    flex-basis: calc((100% - 3 * 24px) / 4);
   }
 }
-@media screen and (max-width: 767px) {
-  .collegues-list .card:not(:last-child) {
-    margin-bottom: 72px;
-  }
-}
+
 @media screen and (min-width: 1158px) {
-  .collegues-list .card:not(:last-child) {
+  /*.collegues-list .card:not(:last-child) {
     margin-right: 24px;
-  }
+  }*/
+
   .collegues-list {
     display: flex;
     margin: 0;
     padding: 0;
     align-items: center;
+    gap: 24px;
   }
   /*.collegues-list .card {
     width: 264px;
@@ -1292,8 +1299,8 @@ footer {
 
 @media screen and (min-width: 1158px) {
   .shape {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 132px;
   }
   .join-part {
     display: flex;
@@ -1341,7 +1348,6 @@ footer {
 .card-link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  
 }
 .card-link:hover,
 .card-link:focus {
